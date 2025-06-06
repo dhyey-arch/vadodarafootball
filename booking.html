@@ -30,37 +30,17 @@
         <option value="9:00 PM – 10:00 PM">9:00 PM – 10:00 PM</option>
         <option value="10:00 PM – 11:00 PM">10:00 PM – 11:00 PM</option>
       </select>
-    <section class="payment-section">
-  <h2>Pay ₹120 to Confirm Booking</h2>
+      <section class="payment-section">
+  <h2>Pay ₹120 to Book Your Slot</h2>
+
+  <!-- UPI QR Code with ₹120 -->
   <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=6354280827@fam&pn=VadodaraFootball&am=120&cu=INR" alt="Pay ₹120 via UPI" />
-  <p>Scan the QR code or click the button below to pay ₹120.</p>
-  <a href="upi://pay?pa=6354280827@fam&pn=VadodaraFootball&am=120&cu=INR" class="pay-btn" target="_blank">Pay ₹120 Now</a>
-  <p><input type="checkbox" id="paidCheck" /> I have paid ₹120</p>
+
+  <!-- UPI Link Button -->
+  <p>Scan the QR above or click below to pay ₹120</p>
+  <a href="upi://pay?pa=6354280827@fam&pn=VadodaraFootball&am=120&cu=INR" class="pay-btn">Pay ₹120 Now</a>
 </section>
 
-<script>
-  const paidCheck = document.getElementById('paidCheck');
-  const bookingForm = document.getElementById('bookingForm');
-
-  paidCheck.addEventListener('change', () => {
-    const disabled = !paidCheck.checked;
-    Array.from(bookingForm.elements).forEach(el => {
-      el.disabled = disabled;
-    });
-  });
-
-  bookingForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if(!paidCheck.checked){
-      alert('Please confirm payment before booking.');
-      return;
-    }
-    alert('Thank you for booking! We will contact you soon.');
-    bookingForm.reset();
-    paidCheck.checked = false;
-    Array.from(bookingForm.elements).forEach(el => el.disabled = true);
-  });
-</script>
 
       <input type="tel" id="number" name="number" placeholder="Phone Number" required />
 
@@ -77,3 +57,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
