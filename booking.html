@@ -30,16 +30,17 @@
         <option value="9:00 PM – 10:00 PM">9:00 PM – 10:00 PM</option>
         <option value="10:00 PM – 11:00 PM">10:00 PM – 11:00 PM</option>
       </select>
-      <section class="payment-section">
-  <h2>Pay to Book Your Slot</h2>
+     <section class="payment-section">
+  <h2>Pay ₹120 to Book Your Slot</h2>
 
-  <!-- UPI QR Code -->
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=6354280827@fam&pn=VadodaraFootball&cu=INR" alt="Pay via UPI" />
+  <!-- UPI QR Code with ₹120 -->
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=6354280827@fam&pn=VadodaraFootball&am=120&cu=INR" alt="Pay ₹120 via UPI" />
 
   <!-- UPI Link Button -->
-  <p>Scan the QR above or click below to pay</p>
-  <a href="upi://pay?pa=6354280827@fam&pn=VadodaraFootball&cu=INR" class="pay-btn">Pay Now</a>
+  <p>Scan the QR above or click below to pay ₹120</p>
+  <a href="upi://pay?pa=6354280827@fam&pn=VadodaraFootball&am=120&cu=INR" class="pay-btn">Pay ₹120 Now</a>
 </section>
+
 
 
       <input type="tel" id="number" name="number" placeholder="Phone Number" required />
