@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Slot | Vadodara Football</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="green-theme">
+  <header class="navbar">
+    <div class="logo">Vadodara Football</div>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="booking.html" class="nav-link active">Book Now</a>
+    </nav>
+  </header>
+
+  <section class="form-section">
+    <h1>📅 Book Your Slot</h1>
+    <p>Fill in your details to secure a place in tonight’s football match!</p>
+
+    <form id="bookingForm" class="booking-form">
+      <input type="text" id="name" name="name" placeholder="Full Name" required />
+
+      <input type="date" id="date" name="date" required min="<?= date('Y-m-d') ?>" />
+
+      <select id="time" name="time" required>
+        <option value="">Select Time Slot</option>
+        <option value="8:00 PM – 9:00 PM">8:00 PM – 9:00 PM</option>
+        <option value="9:00 PM – 10:00 PM">9:00 PM – 10:00 PM</option>
+        <option value="10:00 PM – 11:00 PM">10:00 PM – 11:00 PM</option>
+      </select>
+
+      <input type="tel" id="number" name="number" placeholder="Phone Number" required />
+
+      <button type="submit" class="btn pulse">Submit Booking</button>
+    </form>
+
+    <p id="response" class="response-msg"></p>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 Vadodara Football | All rights reserved
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
